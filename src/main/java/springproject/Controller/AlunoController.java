@@ -10,7 +10,7 @@ public class AlunoController {
     
     @GetMapping("mensagemboasvindas")
     public String mensagemBoasVindas() {
-        return "Bem-vindo ao Spring Bot!";
+        return "Bem-vindo ao Spring Boot!";
     }
 
     
