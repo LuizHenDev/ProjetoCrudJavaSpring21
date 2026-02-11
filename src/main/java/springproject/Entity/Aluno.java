@@ -1,5 +1,8 @@
 package springproject.Entity;
 
+import java.time.LocalDate;
+
+import io.micrometer.common.lang.NonNull;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,15 +25,28 @@ public class Aluno {
     @Column(name = "id")
     private Long id;
 
+    @NonNull
     @Column(name = "nome")
     private String nome;
 
+
+    @NonNull
     @Column(name = "email")
     private String email;
 
+    @NonNull
     @Column(name ="cpf")
     private String cpf;
+
+    @NonNull
+    @Column(name = "username")
+    private String username;
+
+    @NonNull
+    @Column(name = "password")
+    private String password;
     
+    @NonNull
     @Column(name="DataNascimento")
-    private String dataNascimento;
+    private LocalDate dataNascimento;
 }
