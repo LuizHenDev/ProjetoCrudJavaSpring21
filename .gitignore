@@ -30,7 +30,7 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
-./backend/vscode/
+backend/.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -44,7 +44,7 @@ build/
 
 
 # Miscellaneous
-frontend/.angular/cache
+frontend/.angular/cache/
 .sass-cache/
 /connect.lock
 /coverage
@@ -52,18 +52,20 @@ frontend/.angular/cache
 testem.log
 /typings
 __screenshots__/
+it 
+
 
 # System files
 .DS_Store
 Thumbs.db
 
 # Compiled output
-/frontend/dist
-/frontend/tmp
-/frontend/out-tsc
-/frontend/bazel-out
+frontend/dist/
+frontend/tmp
+frontend/out-tsc
+frontend/bazel-out
 
 # Node
-/frontend/node_modules
+/frontend/node_modules/
 /npm-debug.log
 /yarn-error.log
