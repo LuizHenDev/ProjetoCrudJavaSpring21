@@ -69,3 +69,4 @@ frontend/bazel-out
 /frontend/node_modules/
 /npm-debug.log
 /yarn-error.log
+/frontend/package-lock.json

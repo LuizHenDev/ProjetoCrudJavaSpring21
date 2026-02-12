@@ -1,97 +1,92 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
   :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
+    --bright-blue: oklch(79.586% 0.17521 325.999);
     --electric-violet: oklch(53.18% 0.28 296.97);
+    --black: oklch(0% 0 0);
+    --violeta-escuro: oklch(30.446% 0.12807 326.173 / 0.493);
   }
-
-
-  h1 {
-    font-size: 3.125rem;
-    color: var(--electric-violet);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
+  * {
+    font-family: 'Roboto';
+    padding: 0;
     margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
   }
-
-  p {
-    margin: 0;
-    color: var(--red-700);
-  }
-
-  main {
-    width: 100%;
-    min-height: 100%;
+  .cabecalhoMenuInicial {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
+    height: 1.5rem;
+    padding: 0.09rem;
+    background-color: var(--electric-violet);
+    color: white;
+
   }
+  ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.agrupamentoOpcoesMenuDireito{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-right: 10px;
+  margin-left: 20px;
+}
 
-  .angular-logo {
-    max-width: 9.2rem;
-  }
+.agrupamentoOpcoesMenuDireito li{
+  list-style: none;
+  padding:0;
+  user-select: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
 
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
+}
 
-  .content h1 {
-    margin-top: 1.75rem;
-  }
+.agrupamentoOpcoesMenuDireito li:hover {
+  background-color: var(--violeta-escuro);
+  box-shadow: var(--violeta-escuro);
+  border-radius: 4px;
+}
+.agrupamentoTextoIcone{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
 
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
 </style>
 
 <main class="main">
-  <div class="content">
-    <h1>Olá, {{title()}}</h1>
-    <p>{{subtitle()}}</p>
-  </div>
-</main>
+  <header class="cabecalhoMenuInicial">
+    <div>
+      <ul class="agrupamentoOpcoesMenuEsquerdo">
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+      </ul>
+    </div>
+    <ul class="agrupamentoOpcoesMenuDireito">
+      <li class="agrupamentoTextoIcone" id="menuInicialAbrirRotinas">
+          <fa-icon [icon]="faList"></fa-icon>
+          <span>Rotinas</span>
+      </li>
+      <li class="agrupamentoTextoIcone" id='menuInicialLocalizarRotinas' >
+          <fa-icon [icon]="faSearch"></fa-icon>
+          <span>Buscar Rotinas</span>
+      </li>
+      <li class="agrupamentoTextoIcone" id="menuInicialConfiguracoesUsuario">
+          <fa-icon [icon]="faUser"></fa-icon>
+          <span>{{nomeUsuario()}}</span>
+      </li>
+    </ul>
+
+  </header>
+  <body>
+
+  </body>
+</main>
 
 
 <router-outlet />
