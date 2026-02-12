@@ -44,7 +44,7 @@ build/
 
 
 # Miscellaneous
-/frontend/angular/cache
+/frontend/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
