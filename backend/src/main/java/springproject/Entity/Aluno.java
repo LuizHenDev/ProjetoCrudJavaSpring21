@@ -35,6 +35,7 @@ public class Aluno {
     private String email;
 
     @NonNull
+
     @Column(name ="cpf")
     private String cpf;
 
@@ -45,7 +46,7 @@ public class Aluno {
     @NonNull
     @Column(name = "password")
     private String password;
-    
+
     @NonNull
     @Column(name="DataNascimento")
     private LocalDate dataNascimento;
