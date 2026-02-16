@@ -1,0 +1,24 @@
+<header class="cabecalhoMenuInicial">
+    <div>
+      <ul class="agrupamentoOpcoesMenuEsquerdo">
+
+      </ul>
+    </div>
+    <ul class="agrupamentoOpcoesMenuDireito">
+      <li class="agrupamentoTextoIcone" id="menuInicialAbrirRotinas">
+          <fa-icon [icon]="faList"></fa-icon>
+          <span>Rotinas</span>
+      </li>
+      <li class="agrupamentoTextoIcone" id='menuInicialLocalizarRotinas' >
+          <fa-icon [icon]="faSearch"></fa-icon>
+          <span>Buscar Rotinas</span>
+      </li>
+      <li mat-button [matMenuTriggerFor]="menu" class="agrupamentoTextoIcone" id="menuInicialConfiguracoesUsuario">
+          <mat-menu menu-estilizado #menu="matMenu">
+            <button (click)="alterarNomeUsuario()" mat-menu-item id="menuInicialConfigUsuario" >Configurações</button>
+          </mat-menu>
+          <fa-icon [icon]="faUser"></fa-icon>
+          <span>{{nomeUsuario()}}</span>
+      </li>
+    </ul>
+</header>
