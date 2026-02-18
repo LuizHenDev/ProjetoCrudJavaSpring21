@@ -47,6 +47,9 @@
   transition: background 0.2s ease;
 
 }
+.naoselecionavel{
+  user-select: none;
+}
 
 .agrupamentoOpcoesMenuDireito li:hover {
   background-color: var(--violeta-escuro);
@@ -58,4 +61,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
+
+::ng-deep .menu-usuario {
+  margin-top: 0.3rem !important;
+
 }

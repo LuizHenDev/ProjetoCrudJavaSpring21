@@ -1,7 +1,12 @@
 <header class="cabecalhoMenuInicial">
     <div>
-      <ul class="agrupamentoOpcoesMenuEsquerdo">
-
+      <ul class="agrupamentoOpcoesMenuEsquerdo naoselecionavel">
+        @if(nomeUsuario() ==='Luiz'){
+          <span>Usuário Master</span>
+        }
+        @else{
+          <span>Usuário Comum</span>
+        }
       </ul>
     </div>
     <ul class="agrupamentoOpcoesMenuDireito">
@@ -14,11 +19,12 @@
           <span>Buscar Rotinas</span>
       </li>
       <li mat-button [matMenuTriggerFor]="menu" class="agrupamentoTextoIcone" id="menuInicialConfiguracoesUsuario">
-          <mat-menu menu-estilizado #menu="matMenu">
+          <mat-menu yPosition="below"  [overlapTrigger]="false" class="menu-usuario" #menu="matMenu">
             <button (click)="alterarNomeUsuario()" mat-menu-item id="menuInicialConfigUsuario" >Configurações</button>
           </mat-menu>
           <fa-icon [icon]="faUser"></fa-icon>
           <span>{{nomeUsuario()}}</span>
+
       </li>
     </ul>
 </header>

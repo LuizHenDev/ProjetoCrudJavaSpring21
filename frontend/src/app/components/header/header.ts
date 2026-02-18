@@ -12,10 +12,12 @@ import {MatButtonModule} from '@angular/material/button';
 export class Header {
   protected readonly nomeUsuario = signal('Luiz');
   protected readonly faSearch = faSearch;
+  variavel = signal('');
   protected readonly faUser = faUser;
   protected readonly faList = faList;
-
   alterarNomeUsuario() {
-    (this.nomeUsuario() =='Luiz' ?this.nomeUsuario.set('Duani') : this.nomeUsuario.set('Luiz'));
+    (this.nomeUsuario() =='Luiz' ?this.nomeUsuario.set('Outro') : this.nomeUsuario.set('Luiz'));
   }
+
+
 }
